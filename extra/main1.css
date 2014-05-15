@@ -1,0 +1,199 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+header,nav,ul,aside,section,footer,hgroup,article{
+display: block;
+}
+body{
+	width:100%;
+}
+.first{
+	max-width:100%;	
+	display:-webkit-box;
+	height:667px;
+	background: -moz-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.8)), color-stop(100%,rgba(255,255,255,0.3))), url(sev2_4.jpg) repeat 0 0;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.8)), color-stop(100%,rgba(255,255,255,0.3))), url(sev2_4.jpg) repeat 0 0;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+}
+
+
+.tex {
+  display:block;
+  max-width:320px;
+  height:65px;
+  position:absolute;
+  left:30%;
+  top:25px;
+}
+.ml{
+position:absolute;
+display:block;
+font-family:"tahoma","Times New Roman";
+font-size:25px;
+top:100px;
+right:100px;
+}
+a:link {text-decoration:none;color:black;}
+a:visited {text-decoration:none;color:black;}
+a:hover {text-decoration:underline;color:black;}
+a:active {text-decoration:underline;color:black;}
+
+.signin{
+	float:left;
+	position:absolute;
+	border:2px solid #043b4d;
+	height:400px;
+	width:400px;
+	top:240px;
+	left:200px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;	
+	background:rgb(0,0,0);  
+    background: transparent\9;  
+    background:rgba(255,255,255,0.4);
+}
+.login{	
+font-family:"tahoma","Times New Roman";
+font-size:30px;
+text-align:center;
+border-bottom:1px solid #0bc32e;
+padding-bottom:3px;
+-webkit-border-top-right-radius:10px;
+-webkit-border-top-left-radius:10px;
+-webkit-border-top-right-radius:10px;
+background-color:#1896bf;
+color:#1c3c46;
+}
+
+.inmain{
+color:#1c3c46;
+font-size:18px;
+padding:20px;
+margin:12px;
+}
+
+#submit ,#reset{
+	background-color:#238a8b;
+	height:35px;
+	font-size:15px;
+	padding:8px;
+	border-color:#0c5f60;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	margin-left:30px;
+	padding-right:25px;
+	padding-left:25px;
+}
+
+.signup{
+	float:left;
+	position:absolute;
+	border:2px solid #043b4d;
+	height:400px;
+	width:400px;
+	top:240px;
+	right:200px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;	
+	background:rgb(0,0,0);  
+    background: transparent\9;  
+    background:rgba(255,255,255,0.4);
+}
+
+
+.login2{
+	
+font-family:"tahoma","Times New Roman";
+font-size:25px;
+text-align:center;
+border-bottom:1px solid #0bc32e;
+padding-bottom:3px;
+-webkit-border-top-right-radius:10px;
+-webkit-border-top-left-radius:10px;
+background-color:#1896bf;
+color:#1c3c46;
+}
+
+.upmain{
+color:#1c3c46;
+font-size:18px;
+padding:20px;
+margin:12px;
+margin-left:25px; 
+}
+
+input, textarea {
+  background-color : #f6d7c6;
+}
+
+#linedraw{
+	position:absolute;
+	border-left:2px solid black;
+	height:420px;
+	width:400px;
+	top:230px;
+	right:280px;
+}
+
+
+/* class drop down */
+nav{
+position:absolute;
+top:15px;
+right:70px;
+}
+nav ul ul {
+	display: none;
+}
+
+	nav ul li:hover > ul {
+		display: block;
+	}
+	nav ul {
+	background: #efefef; 
+	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
+	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
+	background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
+	box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+	padding: 0 20px;
+	border-radius: 10px;  
+	list-style: none;
+	position: relative;
+	display: inline-table;
+	min-width:100px;
+	text-align:center;
+}
+	nav ul:after {
+		content: ""; clear: both; display: block;
+	}
+	
+	nav ul li a {
+		display: block; padding: 13px 15px;
+		color: #757575; text-decoration: none;
+	}
+	nav ul ul {
+	background: #5f6975; border-radius: 0px; padding: 0;
+	position: absolute; top: 100%;
+	margin-left:0px;
+	z-index:1;
+	}
+	nav ul ul li {
+		float: none; 
+		border-top: 1px solid #6b727c;
+		border-bottom: 1px solid #575f6a;
+		position: relative;
+	}
+		nav ul ul li a {
+			padding: 15px 40px;
+			color: #fff;
+		}	
+			nav ul ul li a:hover {
+				background: #4b545f;
+			}
+		.dropdown	a:hover {text-decoration:none;color:black;}
+.dropdown	a:active {text-decoration:none;color:black;}
+
+/* ends here */ 
