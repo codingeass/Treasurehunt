@@ -1,31 +1,23 @@
-<html>
+<html> 3ss
 <head>
 <title>Treasure hunt</title>
-<link rel="stylesheet" href="extra/main.css"/>
-<script src="extra/main.js"></script>
+<link rel="stylesheet" href="css/main.css"/>
+<script src="js/main.js"></script>
 </head>
 <body>
 <section class="first">
 <div class="tex">
-<img src="extra/mkmk.png" />
+<img src="img\mkmk.png" />
 </div>
 <section class="dropdown">
-
 <?php
 	$i=0;
 	$level=0;
 	$score=0;
-	if(isset($_COOKIE["1234trlko"])&&isset($_COOKIE["3frymepan"])){
-			$user=$_COOKIE["1234trlko"];
-			$pass=$_COOKIE["3frymepan"];
-			$mysql=mysql_connect("","","") 
-			or die ("Cannot connect to database");
-			if (mysqli_connect_errno())
-			{
-				echo "Failed to connect to MySQL: " . mysqli_connect_error();
-			}
-			$db = mysql_select_db("",$mysql);
-			$qm="Select * from username where user='".$user."';";
+	if(isset($_COOKIE["1234trlko"])&&isset($_COOKIE["3frymepan"])){	
+	include("php/cookie.php");
+	include("php/connect.php");
+	$qm="Select * from username where user='".$user."';";
 			$rm=mysql_query($qm);
 			$qm1="Select * from userscore where user='".$user."';";
 			$rm1=mysql_query($qm1);
@@ -61,21 +53,20 @@
 				}
 				else
 				echo "<div class='sign1'>
-<a href='signup.php'>LogIn</a>
+<a href='php\signup.php'>LogIn</a>
 </div>";
 			}
-			// if any one tries to change marks of another changing cookie name and playing
 		}
-	else
+else
 	echo "<div class='sign1'>
-<a href='signup.php'>LogIn</a>
-</div>";
+		<a href='php\signup.php'>LogIn</a>
+	</div>";
 ?>
 
 </section>
 
 <div class="ml">
-<a href="">HOME</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="signup.php">SIGN UP</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="#second">DASHBOARD</a>
+<a href="">HOME</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="php\signup.php">SIGN UP</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="#second">DASHBOARD</a>
 </div>
 <div class="header_text">
 Here we compete to Win
@@ -84,7 +75,7 @@ Here we compete to Win
 Here we compete to Win<br/>
 titgmtimg
 </div>
-<div class="register" onclick="window.location='signup.php'">
+<div class="register" onclick="window.location='php\signup.php'">
 Register Here
 </div>
 </section>
@@ -96,13 +87,7 @@ Register Here
 
 <?php
 
-$mysql=mysql_connect("","","") 
-	or die ("Cannot connect to database");
-if (mysqli_connect_errno())
-{
-	echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}
-$db = mysql_select_db("trea",$mysql);
+require("php\connect.php");
 $query="Select * from userscore order by score desc;";
 $result=mysql_query($query);
 echo "<tr><th id='user'>Username</th><th id='score'>Score</th></tr>";
@@ -160,7 +145,7 @@ mkmkmkmk
 Developer :
 <br/><br/>
 <div id="insideimg">
-<img src="extra/amandeep.png" id="ima"/>
+<img src="img/amandeep.png" id="ima"/>
 <br/> 
 &nbsp;&nbsp;Amandeep Gupta<br/>
 &nbsp;&nbsp;+9797521967

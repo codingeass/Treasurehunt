@@ -1,15 +1,14 @@
 <html>
 
 <head>
-<link rel="stylesheet" href="quiz.css">
+<link rel="stylesheet" href="../css/quiz.css">
 </head>
 
 <body>
 <section class="first">
 <div class="tex">
-<img src="mkmk.png" />
+<img src="../img/mkmk.png" />
 </div>
-
 
 <div class="ml">
 <a href="../index.php">HOME</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="">SIGN UP</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="../index.php#second">DASHBOARD</a>
@@ -23,16 +22,10 @@
 	$i=0;
 	$level=0;
 	$score=0;
-	if(isset($_COOKIE["1234trlko"])&&isset($_COOKIE["3frymepan"])){
-			$user=$_COOKIE["1234trlko"];
-			$pass=$_COOKIE["3frymepan"];
-			$mysql=mysql_connect("","","") 
-			or die ("Cannot connect to database");
-			if (mysqli_connect_errno())
-			{
-				echo "Failed to connect to MySQL: " . mysqli_connect_error();
-			}
-			$db = mysql_select_db("trea",$mysql);
+	if(isset($_COOKIE["1234trlko"])&&isset($_COOKIE["3frymepan"]))
+	{
+	require("..\php\cookie.php");
+	require_once("..\php\connect.php");
 			$qm="Select * from username where user='".$user."';";
 			$rm=mysql_query($qm);
 			while($rq=mysql_fetch_array($rm))
@@ -43,10 +36,9 @@
 					<nav>
 						<ul>
 							<li><a href='#'>".$user."</a>
-							<ul>
-				 				
+							<ul> 				
 								<li><a href='#'>Go to Account</a></li>
-								<li><a href='../logout.php'>Logout</a>
+								<li><a href='../php/logout.php'>Logout</a>
 							</ul>
 							</li>
 						</ul>
@@ -54,7 +46,7 @@
 				}
 				else
 				echo "<div class='sign1'>
-<a href='../signup.php'>LogIn</a>
+<a href='../php/signup.php'>LogIn</a>
 </div>";
 			}
 			// if any one tries to change marks of another changing cookie name and playing
@@ -84,13 +76,7 @@ Score Board
 			echo "Username :".$_COOKIE["1234trlko"];
 			$user=$_COOKIE["1234trlko"];
 			$pass=$_COOKIE["3frymepan"];
-			$mysql=mysql_connect("","","") 
-			or die ("Cannot connect to database");
-			if (mysqli_connect_errno())
-			{
-				echo "Failed to connect to MySQL: " . mysqli_connect_error();
-			}
-			$db = mysql_select_db("trea",$mysql);
+			require_once("..\php\connect.php");
 			$query="Select * from username where user='".$user."';";
 			$result=mysql_query($query);
 			while($res=mysql_fetch_array($result))
@@ -174,11 +160,11 @@ if(isset($_REQUEST["name"])&&isset($_REQUEST["button2"])){
 			if($level>2)
 			echo "<a href='quiz2.php'><br/>Click here to go to next level.</a>";
 ?>
+
 </div>
 
 </section>
 
 </body>
-
 
 </html>
