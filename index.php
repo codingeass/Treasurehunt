@@ -1,4 +1,4 @@
-<html> 3ss
+<html>
 <head>
 <title>Treasure hunt</title>
 <link rel="stylesheet" href="css/main.css"/>
@@ -12,6 +12,7 @@
 <section class="dropdown">
 <?php
 	$i=0;
+	//initialized
 	$level=0;
 	$score=0;
 	if(isset($_COOKIE["1234trlko"])&&isset($_COOKIE["3frymepan"])){	
@@ -75,7 +76,7 @@ Here we compete to Win
 Here we compete to Win<br/>
 titgmtimg
 </div>
-<div class="register" onclick="window.location='php\signup.php'">
+<div class="register" onclick="window.location='php\/signup.php'">
 Register Here
 </div>
 </section>
