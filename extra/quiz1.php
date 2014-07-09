@@ -19,42 +19,7 @@
 <section class="dropdown">
 
 <?php
-	$i=0;
-	$level=0;
-	$score=0;
-	if(isset($_COOKIE["1234trlko"])&&isset($_COOKIE["3frymepan"]))
-	{
-	require("..\php\cookie.php");
-	require_once("..\php\connect.php");
-			$qm="Select * from username where user='".$user."';";
-			$rm=mysql_query($qm);
-			while($rq=mysql_fetch_array($rm))
-			{
-				if($pass==md5($rq["password"]))
-				{
-					echo "
-					<nav>
-						<ul>
-							<li><a href='#'>".$user."</a>
-							<ul> 				
-								<li><a href='#'>Go to Account</a></li>
-								<li><a href='../php/logout.php'>Logout</a>
-							</ul>
-							</li>
-						</ul>
-					</nav>";
-				}
-				else
-				echo "<div class='sign1'>
-<a href='../php/signup.php'>LogIn</a>
-</div>";
-			}
-			// if any one tries to change marks of another changing cookie name and playing
-		}
-	else
-	echo "<div class='sign1'>
-<a href='../signup.php'>LogIn</a>
-</div>";
+	require_once("../php/dropdownquiz.php");
 ?>
 
 </section>
